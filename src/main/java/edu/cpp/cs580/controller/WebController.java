@@ -44,6 +44,10 @@ public class WebController {
 	 * in your web browser, type the link:
 	 * 	http://localhost:8080/cs580/ping
 	 */
+	@RequestMapping (value = "/cs580/darvesh", method =RequestMethod.GET)
+	String Darvesh(){
+			return"Darvesh Pari Singh";
+	}
 	@RequestMapping(value = "/cs580/ping", method = RequestMethod.GET)
 	String healthCheck() {
 		// You can replace this with other string,
