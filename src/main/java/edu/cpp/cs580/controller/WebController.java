@@ -51,6 +51,18 @@ public class WebController {
 		// with the URL: http://localhost:8080/
 		return "OK";
 	}
+	
+	/**
+	 * New example for HTTP API (hgdoan).
+	 * It returns a String "First Example" in the HTTP response.
+	 * To try it, run the web application locally,
+	 * in your web browser, type the link:
+	 * 	http://localhost:8080/cs580/example
+	 */
+	@RequestMapping(value = "/cs580/example", method = RequestMethod.GET)
+	String returnString() {
+		return "First Example";
+	}
 
 	/**
 	 * This is a simple example of how to use a data manager
