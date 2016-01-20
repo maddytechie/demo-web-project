@@ -17,7 +17,7 @@ import edu.cpp.cs580.data.provider.UserManager;
 
 /**
  * This is the controller used by Spring framework.
- * <p>  bbbbb
+ * <p>
  * The basic function of this controller is to map
  * each HTTP API Path to the correspondent method.
  *
@@ -44,28 +44,13 @@ public class WebController {
 	 * in your web browser, type the link:
 	 * 	http://localhost:8080/cs580/ping
 	 */
-	@RequestMapping (value = "/cs580/darvesh", method =RequestMethod.GET)
-	String Darvesh(){
-			return"Darvesh Pari Singh";
-	}
+	
 	@RequestMapping(value = "/cs580/ping", method = RequestMethod.GET)
 	String healthCheck() {
 		// You can replace this with other string,
 		// and run the application locally to check your changes
 		// with the URL: http://localhost:8080/
 		return "OK";
-	}
-	
-	/**
-	 * New example for HTTP API (hgdoan).
-	 * It returns a String "First Example" in the HTTP response.
-	 * To try it, run the web application locally,
-	 * in your web browser, type the link:
-	 * 	http://localhost:8080/cs580/example
-	 */
-	@RequestMapping(value = "/cs580/example", method = RequestMethod.GET)
-	String returnString() {
-		return "First Example";
 	}
 
 	/**
@@ -147,6 +132,26 @@ public class WebController {
 		ModelAndView modelAndView = new ModelAndView("home");
 		modelAndView.addObject("users", listAllUsers());
 		return modelAndView;
+	}
+	
+	/** Assignment 3 */
+
+	/**
+	 * New example for HTTP API (hgdoan).
+	 * It returns a String "Huy Doan: " & message from url in the HTTP response.
+	 * To try it, run the web application locally,
+	 * in your web browser, type the link:
+	 * 	http://localhost:8080/cs580/example/{msg}
+	 */
+	@RequestMapping(value = "/cs580/example/{msg}", method = RequestMethod.GET)
+	String returnString(@PathVariable("msg") String msg) {
+		return "Huy Doan: " + msg;
+	}
+	
+	/** New example for HTTP API (darvesh).*/
+	@RequestMapping (value = "/cs580/darvesh", method =RequestMethod.GET)
+	String Darvesh(){
+			return"Darvesh Pari Singh";
 	}
 
 }
