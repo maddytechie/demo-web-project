@@ -155,3 +155,7 @@ public class WebController {
 	}
 
 }
+@RequestMapping (value = "/cs580/devika", method =RequestMethod.GET)
+ +	String Devika(){
+ +			return"Devika kakkar";
+ +	}
