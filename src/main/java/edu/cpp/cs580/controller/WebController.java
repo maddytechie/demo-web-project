@@ -153,9 +153,10 @@ public class WebController {
 	String Darvesh(){
 			return"Darvesh Pari Singh";
 	}
-
+	
+	/** New example for HTTP API (devika).*/
+	@RequestMapping (value = "/cs580/devika", method =RequestMethod.GET)
+ 	String Devika(){
+ 			return"Devika kakkar";
+ 	}
 }
-@RequestMapping (value = "/cs580/devika", method =RequestMethod.GET)
- +	String Devika(){
- +			return"Devika kakkar";
- +	}
