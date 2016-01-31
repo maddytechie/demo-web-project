@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.google.maps.GeoApiContext;
+import com.google.maps.GeocodingApi;
+import com.google.maps.model.GeocodingResult;
+
 import edu.cpp.cs580.App;
 import edu.cpp.cs580.data.User;
 import edu.cpp.cs580.data.provider.UserManager;
@@ -148,10 +152,28 @@ public class WebController {
 		return "Huy Doan: " + msg;
 	}
 	
+	@RequestMapping(value = "/cs580/exampleGoogleLibrary", method = RequestMethod.GET)
+	String returnLocation() {
+		// Replace the API key below with a valid API key.
+		GeoApiContext context = new GeoApiContext().setApiKey("AIzaSyCeBLuD_-XioM3h7wPmqsz6Vwp9Xsj1lLw");
+		GeocodingResult[] results;
+		try {
+			results = GeocodingApi.geocode(context, 
+					"3801 West Temple Avenue Pomona, California 91768").await();
+			return "The address: " + results[0].formattedAddress + " have: <br>" +
+					"Latitude: " + Double.toString(results[0].geometry.location.lat) + "<br>" +
+					"Longtitude: " + Double.toString(results[0].geometry.location.lng) ;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	/** New example for HTTP API (darvesh).*/
 	@RequestMapping (value = "/cs580/darvesh", method =RequestMethod.GET)
 	String Darvesh(){
 			return"Darvesh Pari Singh";
+<<<<<<< HEAD
 			
 	
 	
@@ -212,3 +234,13 @@ public class WebController {
 		}
 
 
+=======
+	}
+	
+	/** New example for HTTP API (devika).*/
+	@RequestMapping (value = "/cs580/devika", method =RequestMethod.GET)
+ 	String Devika(){
+ 			return"Devika kakkar";
+ 	}
+}
+>>>>>>> origin/master
