@@ -242,5 +242,22 @@ public class WebController {
  	String Devika(){
  			return"Devika kakkar";
  	}
-}
->>>>>>> origin/master
+	public class Guava_demo 
+	{
+		   public void main(String args[]) 
+		   {
+		      Guava_demo Test = new Guava_demo();
+		      
+		      Integer x =  99;
+		      Integer y =  new Integer(10);
+		      
+		      System.out.println(Test.sum(x,y));
+		   }
+
+		   public Integer sum(Integer x, Integer y)
+		   {
+		      return x + y;
+		   }	
+		}
+
+}>>>>>>> origin/master
