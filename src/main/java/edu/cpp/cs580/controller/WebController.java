@@ -152,6 +152,63 @@ public class WebController {
 	@RequestMapping (value = "/cs580/darvesh", method =RequestMethod.GET)
 	String Darvesh(){
 			return"Darvesh Pari Singh";
-	}
+			
+	
+	
+	}	
+	public class MathLibraryExample {
 
-}
+		  public void main(String[] args) {
+		    
+		    int i = -7;
+		    int j = -9;
+		    
+		  
+		    System.out.println("i is " + i);     
+		    System.out.println("j is " + j);
+		   
+		     
+		    // The absolute value of a number is equal to 
+		    // the number if the number is positive or 
+		    // zero and equal to the negative of the number 
+		    // if the number is negative.
+		 
+		    System.out.println("|" + i + "| is " + Math.abs(i));     
+		    System.out.println("|" + j + "| is " + Math.abs(j));
+		    ;
+
+		    // Truncating and Rounding functions
+		 
+		   
+		    // The "ceiling" of a number is the   
+		    // smallest integer greater than or equal to
+		    // the number. Every integer is its own 
+		    // ceiling.
+		     System.out.println("The ceiling of " + i + " is " + Math.ceil(i));     
+		     System.out.println("The ceiling of " + j + " is " + Math.ceil(j));
+		    
+		     // The "floor" of a number is the largest  
+		     // integer less than or equal to the number.
+		     // Every integer is its own floor.
+		     System.out.println("The floor of " + i + " is " + Math.floor(i));     
+		     System.out.println("The floor of " + j + " is " + Math.floor(j));
+		   
+		     // Comparison operators
+
+		     // min() returns the smaller of the two arguments you pass it
+		     System.out.println("min(" + i + "," + j + ") is " + Math.min(i,j));     
+		   
+		     // There's a corresponding max() method 
+		     // that returns the larger of two numbers 
+		     System.out.println("max(" + i + "," + j + ") is " + Math.max(i,j));     
+		    
+		    }
+
+		       
+		   
+
+		  }
+
+		}
+
+
