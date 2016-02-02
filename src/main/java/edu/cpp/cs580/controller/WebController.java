@@ -170,13 +170,10 @@ public class WebController {
 	}
 	
 	/** New example for HTTP API (darvesh).*/
-	@RequestMapping (value = "/cs580/darvesh", method =RequestMethod.GET)
+	@RequestMapping(value = "/cs580/darvesh", method =RequestMethod.GET)
 	String Darvesh(){
-			return"Darvesh Pari Singh";
-<<<<<<< HEAD
-			
-	
-	
+			return "Darvesh Pari Singh" ;
+	}
 	}	
 	public class MathLibraryExample {
 
@@ -226,21 +223,16 @@ public class WebController {
 		    
 		    }
 
-		       
-		   
-
-		  }
-
-		}
 
 
-=======
-	}
+
+		 
 	
 	/** New example for HTTP API (devika).*/
 	@RequestMapping (value = "/cs580/devika", method =RequestMethod.GET)
  	String Devika(){
  			return"Devika kakkar";
+<<<<<<< Updated upstream
  	}
 	public class Guava_demo 
 	{
@@ -261,3 +253,7 @@ public class WebController {
 		}
 
 }>>>>>>> origin/master
+=======
+	}
+ 	
+>>>>>>> Stashed changes
