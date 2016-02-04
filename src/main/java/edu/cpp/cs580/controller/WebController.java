@@ -19,6 +19,9 @@ import edu.cpp.cs580.data.User;
 import edu.cpp.cs580.data.provider.UserManager;
 
 
+
+
+
 /**
  * This is the controller used by Spring framework.
  * <p>
@@ -174,8 +177,9 @@ public class WebController {
 	String Darvesh(){
 			return "Darvesh Pari Singh" ;
 	}
-	
-	public class MathLibraryExample {
+}
+ 
+    	class MathLibraryExample {
 
 		  public void main(String[] args) {
 		    
@@ -232,8 +236,8 @@ public class WebController {
 	@RequestMapping (value = "/cs580/devika", method =RequestMethod.GET)
  	String Devika(){
  			return"Devika kakkar";
+
  	}
-	
 	public class Guava_demo 
 	{
 		   public void main(String args[]) 
@@ -249,7 +253,9 @@ public class WebController {
 		   public Integer sum(Integer x, Integer y)
 		   {
 		      return x + y;
-		   }	
-		}
-	}
-}
+		   	
+	
+	   }
+ 	
+	  }
+   }
