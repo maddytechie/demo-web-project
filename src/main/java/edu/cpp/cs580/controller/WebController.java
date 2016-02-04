@@ -174,7 +174,7 @@ public class WebController {
 	String Darvesh(){
 			return "Darvesh Pari Singh" ;
 	}
-	}	
+	
 	public class MathLibraryExample {
 
 		  public void main(String[] args) {
@@ -232,8 +232,8 @@ public class WebController {
 	@RequestMapping (value = "/cs580/devika", method =RequestMethod.GET)
  	String Devika(){
  			return"Devika kakkar";
-<<<<<<< Updated upstream
  	}
+	
 	public class Guava_demo 
 	{
 		   public void main(String args[]) 
@@ -251,9 +251,5 @@ public class WebController {
 		      return x + y;
 		   }	
 		}
-
-}>>>>>>> origin/master
-=======
 	}
- 	
->>>>>>> Stashed changes
+}
