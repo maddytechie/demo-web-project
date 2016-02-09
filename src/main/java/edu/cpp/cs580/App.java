@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import edu.cpp.cs580.data.provider.FSUserManager;
+import edu.cpp.cs580.data.provider.GoogleMapsManager;
 import edu.cpp.cs580.data.provider.UserManager;
 
 @Configuration
@@ -20,6 +21,12 @@ public class App {
      * will be used in this project, where the Autowired
      * annotation is applied.
      */
+	@Bean
+	public GoogleMapsManager googleMapsManager() {
+		GoogleMapsManager googlemapsmanager = new GoogleMapsManager();
+		return googlemapsmanager;
+	}
+	
     @Bean
     public UserManager userManager() {
         UserManager userManager = new FSUserManager();
