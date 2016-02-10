@@ -163,7 +163,7 @@ public class WebController {
 	@RequestMapping(value = "/cs580/exampleGoogleLibrary", method = RequestMethod.GET)
 	String returnDistance() throws Exception {
 		DistanceMatrixElement result;
-		result = googleMapsManager.getResult("3801 West Temple Avenue, Pomona, California 91768", "10298 Lotus Ct, Stanton, California 90680");
+		result = googleMapsManager.getResult("3801 West Temple Avenue, Pomona, California 91768", "17575 Colima Rd, City of Industry, CA 91748");
 		return result.distance.humanReadable + ' ' + result.duration.humanReadable + " & " + result.status.toString();
 	}
 	
