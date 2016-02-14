@@ -178,6 +178,28 @@ public class AppTest
         }
     }
     
+    //this is devika JUnit testing
+    
+    public class MyUnit {
+
+        public String concatenate(String one, String two){
+            return one + two;
+        }
+    }
+    
+    public class MyUnitTest {
+
+        
+        public void testConcatenate() {
+            MyUnit myUnit = new MyUnit();
+
+            String result = myUnit.concatenate("one", "two");
+
+            assertEquals("onetwo", result);
+
+        }
+    }
+    
     
     
 }
