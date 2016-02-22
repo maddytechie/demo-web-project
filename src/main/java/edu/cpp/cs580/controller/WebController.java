@@ -164,7 +164,7 @@ public class WebController {
 	String returnDistance() throws Exception {
 		DistanceMatrixElement result;
 		result = googleMapsManager.getResult("3801 West Temple Avenue, Pomona, California 91768", "17575 Colima Rd, City of Industry, CA 91748");
-		return result.distance.humanReadable + ' ' + result.duration.humanReadable + " & " + result.status.toString() + "Testing Jenkins";
+		return result.distance.humanReadable + ' ' + result.duration.humanReadable + " & " + result.status.toString() + " Testing Jenkins";
 	}
 	
 	/** New example for HTTP API (darvesh).*/

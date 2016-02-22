@@ -4,6 +4,7 @@ import com.google.maps.DistanceMatrixApi;
 import com.google.maps.DistanceMatrixApiRequest;
 import com.google.maps.GeoApiContext;
 import com.google.maps.model.DistanceMatrixElement;
+import com.google.maps.model.TravelMode;
 import com.google.maps.model.Unit;
 
 public class GoogleMapsManager {
@@ -31,6 +32,7 @@ private static final String APIKEY = "AIzaSyCeBLuD_-XioM3h7wPmqsz6Vwp9Xsj1lLw";
 		req.units(Unit.IMPERIAL);
 		req.origins(getOrigin(origin));
 		req.destinations(getDestination(destination));
+		req.mode(TravelMode.DRIVING);
 		DistanceMatrixElement result = req.await().rows[0].elements[0];
 		return result;
 	}
