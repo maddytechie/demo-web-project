@@ -10,10 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.google.maps.GeoApiContext;
-import com.google.maps.GeocodingApi;
 import com.google.maps.model.DistanceMatrixElement;
-import com.google.maps.model.GeocodingResult;
 
 import edu.cpp.cs580.App;
 import edu.cpp.cs580.data.User;
@@ -107,8 +104,8 @@ public class WebController {
 			@RequestParam(value = "major", required = false) String major) {
 		User user = new User();
 		user.setId(id);
-		user.setMajor(major);
-		user.setName(name);
+//		user.setMajor(major);
+//		user.setName(name);
 		userManager.updateUser(user);
 		return user;
 	}

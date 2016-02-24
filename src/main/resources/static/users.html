@@ -1,0 +1,38 @@
+<html ng-app="rideshareApp">
+	<head>
+	    <title>RideShare Users</title>
+	    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	    <!-- Bootstrap -->
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	    <!-- AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+		<!-- Firebase -->
+		<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+		<!-- AngularFire -->
+		<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+	</head>
+	
+	<body ng-controller="UserCtrl as users">
+		<script type="text/javascript" src="home-control-google.js"></script>
+		<h1 align="center">RideShare Users</h1>
+		<div align="center">
+            <label>User List</label>
+            <table border="1">
+                <tr>
+                    <td>ID</td>
+                    <td>Full Name</td>
+                    <td>Address</td>
+                    <td>Phone</td>
+                </tr>
+
+                <tr ng-repeat="user in users">
+                    <td>{{user.id}}</td>
+                    <td>{{user.fullname}}</td>
+                    <td>{{user.address}}, {{user.city}}, {{user.state}} {{user.zipcode}}</td>
+                    <td>{{user.phone}}</td>
+                </tr>
+            </table>
+        </div>
+	</body>
+</html>

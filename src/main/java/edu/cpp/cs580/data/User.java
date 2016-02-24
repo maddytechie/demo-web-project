@@ -1,8 +1,5 @@
 package edu.cpp.cs580.data;
 
-import java.util.Date;
-
-
 /**
  * The basic user object.
  */
@@ -10,12 +7,13 @@ public class User {
 
 	/** The unique user Id */
     private String id;
-    /** The unique user Id */
-    private String name;
-    /** The unique user Id */
-    private String major;
-    /** The timestamp when the user is being created */
-    private String creationTime = new Date(System.currentTimeMillis()).toString();
+    private String fullname;
+    private String address;
+    private String city;
+    private String state;
+    private int zipcode;
+    private String pairid;
+    private String phone;
 
     public String getId() {
         return id;
@@ -25,27 +23,59 @@ public class User {
         this.id = id;
     }
 
-	public String getName() {
-		return name;
+	public String getFullname() {
+		return fullname;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setFullname(String fullname) {
+		this.fullname = fullname;
 	}
 
-	public String getMajor() {
-		return major;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setMajor(String major) {
-		this.major = major;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
-	public String getCreationTime() {
-		return creationTime;
+	public String getCity() {
+		return city;
 	}
 
-	public void setCreationTime(String creationTime) {
-		this.creationTime = creationTime;
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public int getZipcode() {
+		return zipcode;
+	}
+
+	public void setZipcode(int zipcode) {
+		this.zipcode = zipcode;
+	}
+
+	public String getPairid() {
+		return pairid;
+	}
+
+	public void setPairid(String pairid) {
+		this.pairid = pairid;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 }
