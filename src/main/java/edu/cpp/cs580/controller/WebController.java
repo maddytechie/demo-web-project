@@ -143,6 +143,12 @@ public class WebController {
 		return modelAndView;
 	}
 	
+	@RequestMapping(value = "/listusers", method = RequestMethod.GET)
+	ModelAndView getUsersPage() {
+		ModelAndView modelAndView = new ModelAndView("users.html");
+		return modelAndView;
+	}
+	
 	/** Assignment 3 */
 
 	/**
