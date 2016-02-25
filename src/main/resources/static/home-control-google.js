@@ -17,11 +17,17 @@ rideshareApp.directive('displayForm', function(){
 });
 
 rideshareApp.controller('UserCtrl', function ($scope, $http, $firebaseArray) {
+	
+	  $scope.tab = 1;
 
 	  $scope.loadUsers = function() {
 	    var ref = new Firebase("https://brilliant-heat-9710.firebaseio.com/Users");
 	    // download the data into a local object
 	    $scope.users = $firebaseArray(ref);
+	  }
+	  
+	  $scope.checkUser = function(acc) {
+		  $scope.login = $firebaseArray(ref.child(acc)).$asObject();
 	  }
 
 	  $scope.getUser = function() {

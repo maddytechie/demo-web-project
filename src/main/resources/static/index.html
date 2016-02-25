@@ -17,9 +17,9 @@
 	<body>
 		<script type="text/javascript" src="home-control-google.js"></script>
 		<h1 align="center">RideShare Website</h1>
-		<section ng-init="tab = 1">
-		<login-form></login-form>
-		<display-form></display-form>
+		<section ng-controller="UserCtrl as ctrl">
+		<login-form ng-show="tab === 1"></login-form>
+		<display-form ng-show="tab === 2"></display-form>
 		</section>
 	</body>
 </html>
